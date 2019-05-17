@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Message Details</title>
+</head>
+<body>
+    <nav>
+        <a href="/">All Messages </a>
+        <a href="/add"> Add a Message </a><br/>
+    </nav>
+    <div th:object="${message}">
+        <h2 th:text="*{title}"></h2>
+        <span th:inline="text">Posted On: [[${message.postedDate}]] Posted By: [[${message.postedBy}]]</span><br/>
+        <p th:text="*{content}"></p>
+        <a th:href="@{/delete/{id}(id=${message.id})}">Delete</a>
+    </div>
+</body>
+</html>
