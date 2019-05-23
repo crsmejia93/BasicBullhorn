@@ -25,9 +25,9 @@
             <td th:text="${message.postedDate}"></td>
             <td th:text="${message.postedBy}"></td>
             <td>
-                <a th:href="@{/view/{id}(id=${message.id})}">View |</a>
-                <a th:href="@{/update/{id}(id=${message.id})}"> Update |</a>
-                <a th:href="@{/delete/{id}(id=${message.id})}"> Delete</a>
+                <a class="btn btn-secondary" th:href="@{/view/{id}(id=${message.id})}">View</a>
+                <a class="btn btn-secondary" th:href="@{/update/{id}(id=${message.id})}">Update</a>
+                <a class="btn btn-danger" th:href="@{/delete/{id}(id=${message.id})}">Delete</a>
             </td>
         </tr>
     </table>

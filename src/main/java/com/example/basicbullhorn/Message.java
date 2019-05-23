@@ -27,6 +27,8 @@ public class Message {
     @NotNull
     private String postedBy;
 
+    private String imageUrl;
+
     public long getId() {
         return id;
     }
@@ -65,5 +67,13 @@ public class Message {
 
     public void setPostedBy(String postedBy) {
         this.postedBy = postedBy;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }
